@@ -27,30 +27,12 @@
                             <p class="mb-0 h6 fw-light">Let's learn something new today!</p>
                         </div>
                         <!-- SVG Image -->
-                        <img src="assets/images/element/02.svg" class="mt-5" alt="">
+
                         <!-- Info -->
                         <div class="d-sm-flex mt-5 align-items-center justify-content-center">
                             <!-- Avatar group -->
-                            <ul class="avatar-group mb-2 mb-sm-0">
-                                <li class="avatar avatar-sm">
-                                    <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg"
-                                        alt="avatar">
-                                </li>
-                                <li class="avatar avatar-sm">
-                                    <img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg"
-                                        alt="avatar">
-                                </li>
-                                <li class="avatar avatar-sm">
-                                    <img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg"
-                                        alt="avatar">
-                                </li>
-                                <li class="avatar avatar-sm">
-                                    <img class="avatar-img rounded-circle" src="assets/images/avatar/04.jpg"
-                                        alt="avatar">
-                                </li>
-                            </ul>
+
                             <!-- Content -->
-                            <p class="mb-0 h6 fw-light ms-0 ms-sm-3">4k+ Students joined us, now it's your turn.</p>
                         </div>
                     </div>
                 </div>
@@ -61,7 +43,7 @@
                         <div class="col-sm-10 col-xl-8 m-auto">
                             <!-- Title -->
 
-                            <h1 class="fs-2">Login into Eduport!</h1>
+                            <h1 class="fs-2">Login into !</h1>
                             <p class="lead mb-4">Nice to see you! Please log in with your account.</p>
 
                             <!-- Form START -->
@@ -78,6 +60,12 @@
                                             autocomplete="email" autofocus
                                             class="form-control border-0 bg-light rounded-end ps-1"
                                             placeholder="E-mail">
+                                        @error('email')
+                                            <span class="invalid-feedback" role="alert">
+                                                <label class="error" id="name_error"
+                                                    for="name">{{ $message }}</label>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <!-- Password -->
@@ -92,6 +80,11 @@
                                             class="form-control border-0 bg-light rounded-end ps-1"
                                             placeholder="password">
                                     </div>
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <label class="error" id="name_error" for="name">{{ $message }}</label>
+                                        </span>
+                                    @enderror
                                     <div id="passwordHelpBlock" class="form-text">
                                         Your password must be 8 characters at least
                                     </div>
