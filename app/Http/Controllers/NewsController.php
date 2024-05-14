@@ -11,7 +11,7 @@ class NewsController extends Controller
 {
     public function index(Request $request)
     {
-       
+
         $categories = Category::all();
         $searchTitle = $request->input('search_title');
         $searchCategory = $request->input('search_category');
@@ -36,7 +36,7 @@ class NewsController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'image' => 'required|image|max:2048', // 2MB
+            'image' => 'nullable|image|max:2048', // 2MB
             'category_id' => 'required|exists:categorys,id',
             'status' => 'required|in:draft,published',
             'schedule' => 'nullable|date_format:Y-m-d\TH:i',
@@ -44,7 +44,6 @@ class NewsController extends Controller
             'title.required' => 'Trường này là bắt buộc',
             'description.required' => 'Trường này là bắt buộc',
             'image.image' => 'Phải là dạng ảnh',
-            'image.required' => 'Ảnh là bắt buộc',
             'category_id.exists' => 'Không có menu này',
             'category_id.required' => 'Trường này là bắt buộc',
             'status.required' => 'Trường này là bắt buộc',
@@ -98,14 +97,21 @@ class NewsController extends Controller
     public function update(Request $request, Post $news)
     {
         $this->validateNews($request);
+
         if ($request->hasFile('image')) {
-            // Xóa ảnh cũ
-            Storage::disk('public')->delete($news->image);
+            // Xóa ảnh cũ nếu tồn tại
+            if ($news->image && Storage::disk('public')->exists($news->image)) {
+                Storage::disk('public')->delete($news->image);
+            }
 
             // Lưu ảnh mới
             $imagePath = $request->file('image')->store('images', 'public');
+        } else {
+            // Giữ lại ảnh cũ nếu không có ảnh mới
+            $imagePath = $news->image;
         }
 
+        // Cập nhật bài viết
         $news->update([
             'title' => $request->title,
             'description' => $request->description,
@@ -118,6 +124,7 @@ class NewsController extends Controller
 
         return redirect()->route('news.index')->with('success', 'Danh mục đã được cập nhật thành công.');
     }
+
 
     public function destroy(Post $new)
     {

@@ -27,7 +27,6 @@
         <div class="d-flex justify-content-center">
             <div class="col-xl-10" >
                 <div style=" word-wrap: break-word;">
-
                     {!!$news->content!!}
                 </div>
             </div>
