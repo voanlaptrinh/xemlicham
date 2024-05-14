@@ -22,6 +22,9 @@ Route::post('/upload-image', [UploadController::class, 'uploadImage'])->name('up
 Route::get('/', function () {
     return view('login.index');
 });
+Route::get('/home', function () {
+    return view('home.content.index');
+});
 Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::prefix('/category')->group(function () {
         Route::get('/', [CategoryController::class, 'index'])->name('categories.index');

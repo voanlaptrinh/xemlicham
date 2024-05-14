@@ -111,13 +111,13 @@
     <main>
 
 
-        @include('admin.slidebar')
+        @include('home.slidebar')
 
 
 
         <div class="page-content">
 
-            @include('admin.topbar')
+            @include('home.topbar')
 
 
             @yield('content')
@@ -150,7 +150,7 @@
                 'bold italic backcolor | alignleft aligncenter ' +
                 'alignright alignjustify | bullist numlist outdent indent | ' +
                 'removeformat | help | image | table',
-            content_css: "{{asset('/css/codepen.min.css')}}",
+            content_css: '//www.tiny.cloud/css/codepen.min.css',
             images_upload_url: "{{ route('upload-image') }}",
             images_upload_credentials: true,
             relative_urls: false,
