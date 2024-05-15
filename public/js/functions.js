@@ -575,358 +575,358 @@ var e = {
     // END: AOS Animation
 
     // START: 13 Dashboard Chart
-    dashboardChart: function () {
-        var ac = e.select('#ChartPayout');
-        if (e.isVariableDefined(ac)) {
-        var options = {
-          series: [{
-            name: 'Payout',
-            data: [2909, 1259, 950, 1563, 1825, 2526, 2010, 3260, 3005, 3860, 4039]
-          }],
-          chart: {
-            height: 300,
-            type: 'area',
-            toolbar: {
-              show: false
-            },
-          },
+    // dashboardChart: function () {
+    //     var ac = e.select('#ChartPayout');
+    //     if (e.isVariableDefined(ac)) {
+    //     var options = {
+    //       series: [{
+    //         name: 'Payout',
+    //         data: [2909, 1259, 950, 1563, 1825, 2526, 2010, 3260, 3005, 3860, 4039]
+    //       }],
+    //       chart: {
+    //         height: 300,
+    //         type: 'area',
+    //         toolbar: {
+    //           show: false
+    //         },
+    //       },
           
-          dataLabels: {
-            enabled: true
-          },
-          stroke: {
-            curve: 'smooth'
-          },
-          colors: [ThemeColor.getCssVariableValue('--bs-primary')],
-          xaxis: {
-            type: 'Payout',
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct ', 'Nov', 'Dec'],
-            axisBorder: {
-               show: false
-            },
-            axisTicks: {
-                show: false
-            },
-          },
-          yaxis: [{
-              axisTicks: {
-                show: false
-              },
-              axisBorder: {
-                show: false
-              },
-            }],
-          tooltip: {
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "" + "$";
-                }
-              }
-            },
-            marker: {
-              show: !1
-            }
-          }
-        };
-        var chart = new ApexCharts(document.querySelector("#ChartPayout"), options);
-        chart.render();
-        }
-    },
-    // END: Dashboard Chart
+    //       dataLabels: {
+    //         enabled: true
+    //       },
+    //       stroke: {
+    //         curve: 'smooth'
+    //       },
+    //       colors: [ThemeColor.getCssVariableValue('--bs-primary')],
+    //       xaxis: {
+    //         type: 'Payout',
+    //         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct ', 'Nov', 'Dec'],
+    //         axisBorder: {
+    //            show: false
+    //         },
+    //         axisTicks: {
+    //             show: false
+    //         },
+    //       },
+    //       yaxis: [{
+    //           axisTicks: {
+    //             show: false
+    //           },
+    //           axisBorder: {
+    //             show: false
+    //           },
+    //         }],
+    //       tooltip: {
+    //         y: {
+    //           title: {
+    //             formatter: function (e) {
+    //               return "" + "$";
+    //             }
+    //           }
+    //         },
+    //         marker: {
+    //           show: !1
+    //         }
+    //       }
+    //     };
+    //     var chart = new ApexCharts(document.querySelector("#ChartPayout"), options);
+    //     chart.render();
+    //     }
+    // },
+    // // END: Dashboard Chart
 
-    // START: 14 Earning Chart
-    earningChart: function () {
-        var cpe = e.select('#ChartPayoutEarning');
-        if (e.isVariableDefined(cpe)) {
-        var options = {
-          series: [{
-            name: 'Payout',
-            data: [500, 700, 900, 1500, 1800, 1000, 0, 2000, 3200, 3000, 4800, 4000]
-          }],
-          chart: {
-            height: 300,
-            type: 'area',
-            sparkline: {
-              enabled: !0
-            }
-          },
-          dataLabels: {
-            enabled: false
-          },
-          stroke: {
-            curve: 'smooth'
-          },
-          colors: [ThemeColor.getCssVariableValue('--bs-primary')],
-          xaxis: {
-            type: 'Payout',
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct ', 'Nov', 'Dec']
-          },
-          grid: {
+    // // START: 14 Earning Chart
+    // earningChart: function () {
+    //     var cpe = e.select('#ChartPayoutEarning');
+    //     if (e.isVariableDefined(cpe)) {
+    //     var options = {
+    //       series: [{
+    //         name: 'Payout',
+    //         data: [500, 700, 900, 1500, 1800, 1000, 0, 2000, 3200, 3000, 4800, 4000]
+    //       }],
+    //       chart: {
+    //         height: 300,
+    //         type: 'area',
+    //         sparkline: {
+    //           enabled: !0
+    //         }
+    //       },
+    //       dataLabels: {
+    //         enabled: false
+    //       },
+    //       stroke: {
+    //         curve: 'smooth'
+    //       },
+    //       colors: [ThemeColor.getCssVariableValue('--bs-primary')],
+    //       xaxis: {
+    //         type: 'Payout',
+    //         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct ', 'Nov', 'Dec']
+    //       },
+    //       grid: {
             
-          },
-          tooltip: {
-            y: {
-              title: {
-                formatter: function (e) {
-                  return "" + "$";
-                }
-              }
-            },
-            marker: {
-              show: !1
-            }
-          }
-        };
-        var chart = new ApexCharts(document.querySelector("#ChartPayoutEarning"), options);
-        chart.render();
-        }
-    },
-    // END: Earning Chart
+    //       },
+    //       tooltip: {
+    //         y: {
+    //           title: {
+    //             formatter: function (e) {
+    //               return "" + "$";
+    //             }
+    //           }
+    //         },
+    //         marker: {
+    //           show: !1
+    //         }
+    //       }
+    //     };
+    //     var chart = new ApexCharts(document.querySelector("#ChartPayoutEarning"), options);
+    //     chart.render();
+    //     }
+    // },
+    // // END: Earning Chart
 
-    // START: 15 Earning Chart 2
-    earningChart2: function () {
-        var cpv = e.select('#ChartPageViews');
-        if (e.isVariableDefined(cpv)) {
-          // CHART: Page Views
-          var options = {
-            series: [50, 20, 20, 10, 10],
-            labels: ['Course-1', 'Course-2', 'Course-3', 'Course-4', 'Course-5'],
-            chart: {
-              height: 300,
-              width: 300,
-              offsetX: 50,
-              type: 'donut',
-              sparkline: {
-                enabled: !0
-              }
-            },
-            colors: [
-              ThemeColor.getCssVariableValue('--bs-success'),
-              ThemeColor.getCssVariableValue('--bs-warning'),
-              ThemeColor.getCssVariableValue('--bs-danger'),
-              ThemeColor.getCssVariableValue('--bs-primary'),
-              ThemeColor.getCssVariableValue('--bs-secondary')
-            ],
-            tooltip: {
-              theme: "dark"
-            },
-            responsive: [{
-              breakpoint: 480,
-              options: {
-                chart: {
-                  width: 200,
-                  height: 200,
-                },
-                legend: {
-                  position: 'bottom'
-                }
-              }
-            }]
-          };
-          var chart = new ApexCharts(document.querySelector("#ChartPageViews"), options);
-          chart.render();
-        }
-    },
-    // END: Earning Chart 2
+    // // START: 15 Earning Chart 2
+    // earningChart2: function () {
+    //     var cpv = e.select('#ChartPageViews');
+    //     if (e.isVariableDefined(cpv)) {
+    //       // CHART: Page Views
+    //       var options = {
+    //         series: [50, 20, 20, 10, 10],
+    //         labels: ['Course-1', 'Course-2', 'Course-3', 'Course-4', 'Course-5'],
+    //         chart: {
+    //           height: 300,
+    //           width: 300,
+    //           offsetX: 50,
+    //           type: 'donut',
+    //           sparkline: {
+    //             enabled: !0
+    //           }
+    //         },
+    //         colors: [
+    //           ThemeColor.getCssVariableValue('--bs-success'),
+    //           ThemeColor.getCssVariableValue('--bs-warning'),
+    //           ThemeColor.getCssVariableValue('--bs-danger'),
+    //           ThemeColor.getCssVariableValue('--bs-primary'),
+    //           ThemeColor.getCssVariableValue('--bs-secondary')
+    //         ],
+    //         tooltip: {
+    //           theme: "dark"
+    //         },
+    //         responsive: [{
+    //           breakpoint: 480,
+    //           options: {
+    //             chart: {
+    //               width: 200,
+    //               height: 200,
+    //             },
+    //             legend: {
+    //               position: 'bottom'
+    //             }
+    //           }
+    //         }]
+    //       };
+    //       var chart = new ApexCharts(document.querySelector("#ChartPageViews"), options);
+    //       chart.render();
+    //     }
+    // },
+    // // END: Earning Chart 2
 
-    // START: 16 Traffic Chart
-    trafficChart: function () {
-      var cpv = e.select('#ChartTrafficViews');
-      if (e.isVariableDefined(cpv)) {
-        // CHART: Page Views
-        var options = {
-          series: [70, 15, 10, 5],
-          labels: ['Course-1', 'Course-2', 'Course-3', 'Course-4'],
-          chart: {
-            height: 200,
-            width: 200,
-            offsetX: 0,
-            type: 'donut',
-            sparkline: {
-              enabled: !0
-            }
-          },
-          colors: [
-            ThemeColor.getCssVariableValue('--bs-primary'),
-            ThemeColor.getCssVariableValue('--bs-success'),
-            ThemeColor.getCssVariableValue('--bs-warning'),
-            ThemeColor.getCssVariableValue('--bs-danger')
-          ],
-          tooltip: {
-            theme: "dark"
-          },
-          responsive: [{
-            breakpoint: 480,
-            options: {
-              chart: {
-                width: 200,
-                height: 200,
-              },
-              legend: {
-                position: 'bottom'
-              }
-            }
-          }]
-        };
-        var chart = new ApexCharts(document.querySelector("#ChartTrafficViews"), options);
-        chart.render();
-      }
-    },
+    // // START: 16 Traffic Chart
+    // trafficChart: function () {
+    //   var cpv = e.select('#ChartTrafficViews');
+    //   if (e.isVariableDefined(cpv)) {
+    //     // CHART: Page Views
+    //     var options = {
+    //       series: [70, 15, 10, 5],
+    //       labels: ['Course-1', 'Course-2', 'Course-3', 'Course-4'],
+    //       chart: {
+    //         height: 200,
+    //         width: 200,
+    //         offsetX: 0,
+    //         type: 'donut',
+    //         sparkline: {
+    //           enabled: !0
+    //         }
+    //       },
+    //       colors: [
+    //         ThemeColor.getCssVariableValue('--bs-primary'),
+    //         ThemeColor.getCssVariableValue('--bs-success'),
+    //         ThemeColor.getCssVariableValue('--bs-warning'),
+    //         ThemeColor.getCssVariableValue('--bs-danger')
+    //       ],
+    //       tooltip: {
+    //         theme: "dark"
+    //       },
+    //       responsive: [{
+    //         breakpoint: 480,
+    //         options: {
+    //           chart: {
+    //             width: 200,
+    //             height: 200,
+    //           },
+    //           legend: {
+    //             position: 'bottom'
+    //           }
+    //         }
+    //       }]
+    //     };
+    //     var chart = new ApexCharts(document.querySelector("#ChartTrafficViews"), options);
+    //     chart.render();
+    //   }
+    // },
     // END: Traffic Chart
 
     // START: 17 Active student Chart
-    activeChart: function () {
-      var jj = document.querySelector("#activeChartstudent");
-      if(typeof(jj) != 'undefined' && jj != null){
-      var options = {
-        series: [{
-          name: 'Conversion',
-          data: [200, 290, 500, 500, 430, 316, 478, 700]
-        }],
-        chart: {
-          height: 130,
-          type: 'area',
-          sparkline: {
-            enabled: !0
-          }
-        },
-        dataLabels: {
-          enabled: false
-        },
-        stroke: {
-          curve: 'smooth'
-        },
-        colors: [ThemeColor.getCssVariableValue('--bs-success')],
-        xaxis: {
-          type: 'category',
-          categories: ['Dec 01', 'Dec 02', 'Dec 03', 'Dec 04', 'Dec 05', 'Dec 06', 'Dec 07', 'Dec 08', 'Dec 09 ', 'Dec 10', 'Dec 11']
-        },
-        grid: {
+    // activeChart: function () {
+    //   var jj = document.querySelector("#activeChartstudent");
+    //   if(typeof(jj) != 'undefined' && jj != null){
+    //   var options = {
+    //     series: [{
+    //       name: 'Conversion',
+    //       data: [200, 290, 500, 500, 430, 316, 478, 700]
+    //     }],
+    //     chart: {
+    //       height: 130,
+    //       type: 'area',
+    //       sparkline: {
+    //         enabled: !0
+    //       }
+    //     },
+    //     dataLabels: {
+    //       enabled: false
+    //     },
+    //     stroke: {
+    //       curve: 'smooth'
+    //     },
+    //     colors: [ThemeColor.getCssVariableValue('--bs-success')],
+    //     xaxis: {
+    //       type: 'category',
+    //       categories: ['Dec 01', 'Dec 02', 'Dec 03', 'Dec 04', 'Dec 05', 'Dec 06', 'Dec 07', 'Dec 08', 'Dec 09 ', 'Dec 10', 'Dec 11']
+    //     },
+    //     grid: {
           
-        },
-        tooltip: {
-          y: {
-            title: {
-              formatter: function (e) {
-                return "";
-              }
-            }
-          },
-          marker: {
-            show: !1
-          }
-        }
-      };
-      var chart = new ApexCharts(document.querySelector("#activeChartstudent"), options);
-      chart.render();
-      }
-    },
-    // END: Active student Chart
+    //     },
+    //     tooltip: {
+    //       y: {
+    //         title: {
+    //           formatter: function (e) {
+    //             return "";
+    //           }
+    //         }
+    //       },
+    //       marker: {
+    //         show: !1
+    //       }
+    //     }
+    //   };
+    //   var chart = new ApexCharts(document.querySelector("#activeChartstudent"), options);
+    //   chart.render();
+    //   }
+    // },
+    // // END: Active student Chart
 
-    // START: 18 Active student Chart 2
-    activeChart2: function () {
-      var jj = document.querySelector("#activeChartstudent2");
-      if(typeof(jj) != 'undefined' && jj != null){
-      var options = {
-        series: [{
-          name: 'Conversion',
-          data: [200, 290, 325, 500, 600, 316, 478, 700]
-        }],
-        chart: {
-          height: 130,
-          type: 'area',
-          sparkline: {
-            enabled: !0
-          }
-        },
-        dataLabels: {
-          enabled: false
-        },
-        stroke: {
-          curve: 'smooth'
-        },
-        colors: [ThemeColor.getCssVariableValue('--bs-purple')],
-        xaxis: {
-          type: 'category',
-          categories: ['Dec 01', 'Dec 02', 'Dec 03', 'Dec 04', 'Dec 05', 'Dec 06', 'Dec 07', 'Dec 08', 'Dec 09 ', 'Dec 10', 'Dec 11']
-        },
-        grid: {
+    // // START: 18 Active student Chart 2
+    // activeChart2: function () {
+    //   var jj = document.querySelector("#activeChartstudent2");
+    //   if(typeof(jj) != 'undefined' && jj != null){
+    //   var options = {
+    //     series: [{
+    //       name: 'Conversion',
+    //       data: [200, 290, 325, 500, 600, 316, 478, 700]
+    //     }],
+    //     chart: {
+    //       height: 130,
+    //       type: 'area',
+    //       sparkline: {
+    //         enabled: !0
+    //       }
+    //     },
+    //     dataLabels: {
+    //       enabled: false
+    //     },
+    //     stroke: {
+    //       curve: 'smooth'
+    //     },
+    //     colors: [ThemeColor.getCssVariableValue('--bs-purple')],
+    //     xaxis: {
+    //       type: 'category',
+    //       categories: ['Dec 01', 'Dec 02', 'Dec 03', 'Dec 04', 'Dec 05', 'Dec 06', 'Dec 07', 'Dec 08', 'Dec 09 ', 'Dec 10', 'Dec 11']
+    //     },
+    //     grid: {
           
-        },
-        tooltip: {
-          y: {
-            title: {
-              formatter: function (e) {
-                return "";
-              }
-            }
-          },
-          marker: {
-            show: !1
-          }
-        }
-      };
-      var chart = new ApexCharts(document.querySelector("#activeChartstudent2"), options);
-      chart.render();
-      }
-    },
-    // END: Active student Chart 2
+    //     },
+    //     tooltip: {
+    //       y: {
+    //         title: {
+    //           formatter: function (e) {
+    //             return "";
+    //           }
+    //         }
+    //       },
+    //       marker: {
+    //         show: !1
+    //       }
+    //     }
+    //   };
+    //   var chart = new ApexCharts(document.querySelector("#activeChartstudent2"), options);
+    //   chart.render();
+    //   }
+    // },
+    // // END: Active student Chart 2
 
-    // START: 19 Review chart
-    reviewChart: function (){
-      var ff = document.querySelector("#apexChartPageViews");
-      if(typeof(ff) != 'undefined' && ff != null){
-      var options = {
-        series: [80, 30],
-        labels: ['Positive', 'Negative'],
-        chart: {
-          height: 300,
-          width: 300,
-          type: 'donut',
-          sparkline: {
-            enabled: !0
-          }
-        },
-        stroke: {
-          colors: 'transparent',
-        },
-        colors: [
-          ThemeColor.getCssVariableValue('--bs-success'),
-          ThemeColor.getCssVariableValue('--bs-danger'),
-        ],
-        tooltip: {
-          theme: "dark"
-        },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            chart: {
-              height: 100,
-              width: 100
-            },
-            legend: {
-              position: 'bottom'
-            }
-          }
-        }]
-      };
-      var chart = new ApexCharts(document.querySelector("#apexChartPageViews"), options);
-      chart.render();
-      }
-    },
-    // END: Review chart
+    // // START: 19 Review chart
+    // reviewChart: function (){
+    //   var ff = document.querySelector("#apexChartPageViews");
+    //   if(typeof(ff) != 'undefined' && ff != null){
+    //   var options = {
+    //     series: [80, 30],
+    //     labels: ['Positive', 'Negative'],
+    //     chart: {
+    //       height: 300,
+    //       width: 300,
+    //       type: 'donut',
+    //       sparkline: {
+    //         enabled: !0
+    //       }
+    //     },
+    //     stroke: {
+    //       colors: 'transparent',
+    //     },
+    //     colors: [
+    //       ThemeColor.getCssVariableValue('--bs-success'),
+    //       ThemeColor.getCssVariableValue('--bs-danger'),
+    //     ],
+    //     tooltip: {
+    //       theme: "dark"
+    //     },
+    //     responsive: [{
+    //       breakpoint: 480,
+    //       options: {
+    //         chart: {
+    //           height: 100,
+    //           width: 100
+    //         },
+    //         legend: {
+    //           position: 'bottom'
+    //         }
+    //       }
+    //     }]
+    //   };
+    //   var chart = new ApexCharts(document.querySelector("#apexChartPageViews"), options);
+    //   chart.render();
+    //   }
+    // },
+    // // END: Review chart
 
-    // START: 20 Quill Editor
-    quill: function () {
-        var ql = e.select('#quilleditor');
-        if (e.isVariableDefined(ql)) {
-          var editor = new Quill('#quilleditor', {
-            modules: { toolbar: '#quilltoolbar' },
-            theme: 'snow'
-          });
-        }
-    },
+    // // START: 20 Quill Editor
+    // quill: function () {
+    //     var ql = e.select('#quilleditor');
+    //     if (e.isVariableDefined(ql)) {
+    //       var editor = new Quill('#quilleditor', {
+    //         modules: { toolbar: '#quilltoolbar' },
+    //         theme: 'snow'
+    //       });
+    //     }
+    // },
     // END: Quill Editor
 
     // START: 21 Stepper
@@ -957,78 +957,78 @@ var e = {
     // END: Stepper
 
     // START: 22 Video player
-    videoPlyr: function () {
-        var vdp = e.select('.video-player');
-        if (e.isVariableDefined(vdp)) {
-            // youtube
-            const playerYoutube = new Plyr('#player-youtube', {});
-            window.player = playerYoutube;
+    // videoPlyr: function () {
+    //     var vdp = e.select('.video-player');
+    //     if (e.isVariableDefined(vdp)) {
+    //         // youtube
+    //         const playerYoutube = new Plyr('#player-youtube', {});
+    //         window.player = playerYoutube;
 
-            // Vimeo
-            const playerVimeo = new Plyr('#player-vimeo', {});
-            window.player = playerVimeo;
+    //         // Vimeo
+    //         const playerVimeo = new Plyr('#player-vimeo', {});
+    //         window.player = playerVimeo;
             
-            // HTML video
-            const playerHtmlvideo = new Plyr('video', {
-                captions: {active: true}
-            });
-            window.player = playerHtmlvideo;
+    //         // HTML video
+    //         const playerHtmlvideo = new Plyr('video', {
+    //             captions: {active: true}
+    //         });
+    //         window.player = playerHtmlvideo;
 
-            // HTML audio
-            const playerHtmlaudio = new Plyr('audio', {
-                captions: {active: true}
-            });
-            window.player = playerHtmlaudio;
-        }
-    },
-    // END: Video player
+    //         // HTML audio
+    //         const playerHtmlaudio = new Plyr('audio', {
+    //             captions: {active: true}
+    //         });
+    //         window.player = playerHtmlaudio;
+    //     }
+    // },
+    // // END: Video player
 
-    // START: 23 Pricing
-    pricing: function () {
-        var p = e.select('.price-wrap');
-        if (e.isVariableDefined(p)) {
-          var pWrap = e.selectAll(".price-wrap");
-          pWrap.forEach(item => {
+    // // START: 23 Pricing
+    // pricing: function () {
+    //     var p = e.select('.price-wrap');
+    //     if (e.isVariableDefined(p)) {
+    //       var pWrap = e.selectAll(".price-wrap");
+    //       pWrap.forEach(item => {
 
-            var priceSwitch = item.querySelector('.price-toggle'),
-            priceElement = item.querySelectorAll('.plan-price');
+    //         var priceSwitch = item.querySelector('.price-toggle'),
+    //         priceElement = item.querySelectorAll('.plan-price');
 
-            priceSwitch.addEventListener('change', function () {
-              if (priceSwitch.checked) {
-                priceElement.forEach(pItem => {
-                  var dd = pItem.getAttribute('data-annual-price');
-                  pItem.innerHTML = dd;
-                });
-              } else {
-                priceElement.forEach(pItem => {
-                  var ee = pItem.getAttribute('data-monthly-price');
-                  pItem.innerHTML = ee;
-                });
-              }
-            });
-          });
-        }
-    },
-    // END: Pricing
+    //         priceSwitch.addEventListener('change', function () {
+    //           if (priceSwitch.checked) {
+    //             priceElement.forEach(pItem => {
+    //               var dd = pItem.getAttribute('data-annual-price');
+    //               pItem.innerHTML = dd;
+    //             });
+    //           } else {
+    //             priceElement.forEach(pItem => {
+    //               var ee = pItem.getAttribute('data-monthly-price');
+    //               pItem.innerHTML = ee;
+    //             });
+    //           }
+    //         });
+    //       });
+    //     }
+    // },
+    // // END: Pricing
 
-    // START: 24 Sticky element
-    stickyElement: function () {
-    var scrollpos = window.scrollY;
-    var sp = e.select('.sticky-element');
-    if (e.isVariableDefined(sp)) {
-        var add_class_on_scroll = () => sp.addClass("sticky-element-sticked");
-        var remove_class_on_scroll = () => sp.removeClass("sticky-element-sticked");
+    // // START: 24 Sticky element
+    // stickyElement: function () {
+    // var scrollpos = window.scrollY;
+    // var sp = e.select('.sticky-element');
+    // if (e.isVariableDefined(sp)) {
+    //     var add_class_on_scroll = () => sp.addClass("sticky-element-sticked");
+    //     var remove_class_on_scroll = () => sp.removeClass("sticky-element-sticked");
 
-        window.addEventListener('scroll', function () {
-            scrollpos = window.scrollY;
-            if (scrollpos >= 800) {
-                add_class_on_scroll()
-            } else {
-                remove_class_on_scroll()
-            }
-        });
-    }
-    },
+    //     window.addEventListener('scroll', function () {
+    //         scrollpos = window.scrollY;
+    //         if (scrollpos >= 800) {
+    //             add_class_on_scroll()
+    //         } else {
+    //             remove_class_on_scroll()
+    //         }
+    //     });
+    // }
+    // },
     // END: Sticky element
  
     // START: 25 Overlay scrollbars

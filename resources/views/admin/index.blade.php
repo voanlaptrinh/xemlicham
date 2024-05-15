@@ -130,7 +130,7 @@
     </main>
     <script src="{{ asset('/tinymce/js/tinymce/tinymce.min.js') }}"></script>
     <!-- Toastr JS -->
-    <script src="{{ asset('/js/toastr.min.js') }}"></script>
+    <script src="{{ asset('/js/toastr.min.js') }}" defer></script>
 
     <script>
         @if (Session::has('success'))
@@ -174,9 +174,9 @@
     <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i>
     </div>
 
-    <script src="{{ asset('/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('/vendor/apexcharts/js/apexcharts.min.js') }}"></script>
-    <script src="{{ asset('/vendor/overlay-scrollbar/js/overlayscrollbars.min.js') }}"></script>
+    <script src="{{ asset('/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}" defer></script>
+    <script src="{{ asset('/vendor/apexcharts/js/apexcharts.min.js') }}" defer></script>
+    <script src="{{ asset('/vendor/overlay-scrollbar/js/overlayscrollbars.min.js') }}" defer></script>
 
 
 
