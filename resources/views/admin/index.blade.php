@@ -130,7 +130,7 @@
     </main>
     <script src="{{ asset('/tinymce/js/tinymce/tinymce.min.js') }}"></script>
     <!-- Toastr JS -->
-    <script src="{{ asset('/js/toastr.min.js') }}" defer></script>
+    <script src="{{ asset('/js/toastr.min.js') }}"></script>
 
     <script>
         @if (Session::has('success'))
